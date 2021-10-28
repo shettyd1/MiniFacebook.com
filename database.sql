@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE users(
+username varchar(50) PRIMARY KEY,
+PASSWORD VARCHAR(100) NOT NULL);
+
+LOCK TABLES `users` WRITE;
+INSERT INTO `users` VALUES ('admin', password('1234'));
+UNLOCK TABLES;
+
